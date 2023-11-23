@@ -13,7 +13,7 @@ namespace abak
 {
     public partial class Form1 : Form
     {
-        SqlConnection connect=new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\opilane\source\repos\abak\abFolder\tooded_db.mdf;Integrated Security=True");
+        SqlConnection connect=new SqlConnection(@"Data Source=HP-CZC2349HT9;Initial Catalog=toode;Integrated Security=True");
         SqlDataAdapter adapter_table, adapter_kategooria;
         SqlCommand command, command2;
         public Form1()
@@ -22,7 +22,7 @@ namespace abak
             NaitaAndmed();
             NaitaKategooria();
             lisakatbtn.Click += Lisakatbtn_Click;
-            LisaTabelBtn.Click += andmed_Click;
+            LisaTabelBtn.Click += Lisa_btn_Click;
         }
 
         
@@ -49,7 +49,31 @@ namespace abak
             
             NaitaAndmed();
         }
-        
+        private void Lisa_btn_Click(object sender, EventArgs e)
+        {
+            if (ToodeBox.Text.Trim()!=string.Empty && KogusBox.Text.Trim()!=string.Empty && HindBox.Text.Trim()!=string.Empty && KategooriaBox.SelectedItem != null)
+            {
+                try
+                {
+                    connect.Open();
+                    command= new SqlCommand("INSERT INTO Table (Toodenimetus,kogus,hind,pilt,KATEGOORIAD) VALUES (@tod,@kog,@hin,@pil,@kat");
+                    command.Parameters.AddWithValue("@tod", ToodeBox.Text);
+                    command.Parameters.AddWithValue("@kog", KogusBox.Text);
+                    command.Parameters.AddWithValue("@hin", HindBox.Text);
+                    command.Parameters.AddWithValue("@pil", ToodeBox.Text+".jpg");
+                    command.Parameters.AddWithValue("@kat", KategooriaBox.SelectedIndex+1);//id
+                
+                command.ExecuteNonQuery();
+                    
+                    connect.Close();
+                    NaitaAndmed();
+            }
+                catch (Exception)
+            {
+                MessageBox.Show("Andmebaasiga viga!");
+            }
+        }
+        }
         public void NaitaKategooria()
         {
             connect.Open();
