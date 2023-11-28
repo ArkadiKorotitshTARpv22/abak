@@ -37,7 +37,8 @@
             this.LisaTabelBtn = new System.Windows.Forms.Button();
             this.UuendaTabelBtn = new System.Windows.Forms.Button();
             this.KustutaTabelBtn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.PiltBox = new System.Windows.Forms.TextBox();
+            this.KustutaKat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,19 +115,29 @@
             this.KustutaTabelBtn.Text = "Kustuta";
             this.KustutaTabelBtn.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // PiltBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(86, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(28, 20);
-            this.textBox1.TabIndex = 9;
+            this.PiltBox.Location = new System.Drawing.Point(86, 78);
+            this.PiltBox.Name = "PiltBox";
+            this.PiltBox.Size = new System.Drawing.Size(28, 20);
+            this.PiltBox.TabIndex = 9;
+            // 
+            // KustutaKat
+            // 
+            this.KustutaKat.Location = new System.Drawing.Point(416, 201);
+            this.KustutaKat.Name = "KustutaKat";
+            this.KustutaKat.Size = new System.Drawing.Size(75, 74);
+            this.KustutaKat.TabIndex = 10;
+            this.KustutaKat.Text = "Kustuta Kat";
+            this.KustutaKat.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.KustutaKat);
+            this.Controls.Add(this.PiltBox);
             this.Controls.Add(this.KustutaTabelBtn);
             this.Controls.Add(this.UuendaTabelBtn);
             this.Controls.Add(this.LisaTabelBtn);
@@ -155,7 +166,8 @@
         private System.Windows.Forms.Button LisaTabelBtn;
         private System.Windows.Forms.Button UuendaTabelBtn;
         private System.Windows.Forms.Button KustutaTabelBtn;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox PiltBox;
+        private System.Windows.Forms.Button KustutaKat;
     }
 }
 
