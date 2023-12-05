@@ -39,7 +39,10 @@
             this.KustutaTabelBtn = new System.Windows.Forms.Button();
             this.PiltBox = new System.Windows.Forms.TextBox();
             this.KustutaKat = new System.Windows.Forms.Button();
+            this.toodepictbox = new System.Windows.Forms.PictureBox();
+            this.piltbtn1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toodepictbox)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -131,11 +134,30 @@
             this.KustutaKat.Text = "Kustuta Kat";
             this.KustutaKat.UseVisualStyleBackColor = true;
             // 
+            // toodepictbox
+            // 
+            this.toodepictbox.Location = new System.Drawing.Point(390, 12);
+            this.toodepictbox.Name = "toodepictbox";
+            this.toodepictbox.Size = new System.Drawing.Size(346, 183);
+            this.toodepictbox.TabIndex = 11;
+            this.toodepictbox.TabStop = false;
+            // 
+            // piltbtn1
+            // 
+            this.piltbtn1.Location = new System.Drawing.Point(497, 201);
+            this.piltbtn1.Name = "piltbtn1";
+            this.piltbtn1.Size = new System.Drawing.Size(75, 23);
+            this.piltbtn1.TabIndex = 12;
+            this.piltbtn1.Text = "Otsi pilt";
+            this.piltbtn1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.piltbtn1);
+            this.Controls.Add(this.toodepictbox);
             this.Controls.Add(this.KustutaKat);
             this.Controls.Add(this.PiltBox);
             this.Controls.Add(this.KustutaTabelBtn);
@@ -150,6 +172,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toodepictbox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,6 +191,8 @@
         private System.Windows.Forms.Button KustutaTabelBtn;
         private System.Windows.Forms.TextBox PiltBox;
         private System.Windows.Forms.Button KustutaKat;
+        private System.Windows.Forms.PictureBox toodepictbox;
+        private System.Windows.Forms.Button piltbtn1;
     }
 }
 
